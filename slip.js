@@ -782,6 +782,11 @@ window['Slip'] = (function(){
         },
     };
 
+    // CommonJS
+    if (typeof module !== 'undefined' && module.exports && typeof require === 'function') {
+        module.exports = Slip;
+    }
+
     // AMD
     if ('function' === typeof define && define.amd) {
         define(function(){
